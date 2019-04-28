@@ -1,0 +1,9 @@
+<p>
+  <button [disabled] = "sharedService.userActivityList.length == 0" type = "button"  (click) = 'sharedService.userActivityList = []'>Clear list</button>
+</p>
+
+<ul *ngFor = "let element of sharedService.userActivityList" >
+  <li>
+    {{element.userEvent}} : {{element.image}}
+  </li>
+</ul>
