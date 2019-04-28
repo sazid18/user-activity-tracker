@@ -15,6 +15,7 @@ export class UserComponent implements OnInit {
   hover(img){
     let userActivity = {userEvent : 'hover',image: img};
     this.sharedService.userActivityList.push(userActivity);
+    this.sharedService.postCall(userActivity).subscribe(()=>{});
   }
 
   onClick(img){
