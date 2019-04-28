@@ -1,1 +1,7 @@
+Run this command to get the dependency
 >npm install
+
+then run 
+>node index.js 
+to get the server started
+
