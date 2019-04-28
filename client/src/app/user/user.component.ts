@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from '../shared.service'; 
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-user',
@@ -20,8 +20,6 @@ export class UserComponent implements OnInit {
   onClick(img){
     let userActivity = {userEvent : 'click',image: img};
     this.sharedService.userActivityList.push(userActivity);
-    this.sharedService.postCall(userActivity).subscribe(result => {
-      console.log(result);
-});
+    this.sharedService.postCall(userActivity).subscribe(()=>{});
   }
 }
